@@ -1,0 +1,32 @@
+page-login {
+  font-family: montserrat;
+  font-size: 20px; // font-variant: small-caps;
+  h3 {
+    font-size: 20px;
+    color: #fff;
+    font-family: Montserrat;
+    text-align: center;
+  }
+  ion-input {
+    padding: 5px;
+  }
+  .invalid {
+    border-bottom: 1px solid #FF6153;
+  }
+  .error-message .item-inner {
+    border-bottom: 0 !important;
+  }
+  form {
+    margin-bottom: 32px;
+    button {
+      margin-top: 20px; // text-align: center;
+    }
+  }
+  p {
+    font-size: 0.8em;
+    color: #d2d2d2;
+  }
+  ion-label {
+    margin-left: 5px;
+  }
+}
