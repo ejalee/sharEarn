@@ -1,13 +1,27 @@
 <ion-header>
   <ion-navbar color="mynav">
-    <ion-title>App Dashboard</ion-title>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>Dashboard</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  We'll be testing the log out button.
+  <ion-list>
+    <ion-item text-wrap>
+      <ion-avatar item-left>
+        <img src="assets/img/ejalee.jpg">
+      </ion-avatar>
+      Hey User, <br> Welcome to Share and Earn App
+      <ion-icon name="happy"></ion-icon><br>
+      <ion-icon name="create"></ion-icon>&nbsp; admin@sharearn.co.uk
+    </ion-item>
+  </ion-list>
 
-  <button ion-button color="positive" block (click)="logMeOut()">
-    Log Me Out Please
+  <button ion-button color="mynav" block (click)="logMeOut()">
+    <ion-icon name="log-out"></ion-icon>&nbsp;&nbsp; Log Out
   </button>
 </ion-content>

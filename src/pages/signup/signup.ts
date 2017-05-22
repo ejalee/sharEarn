@@ -3,7 +3,7 @@ import { IonicPage, NavController, LoadingController, Loading, AlertController }
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthProvider } from '../../providers/auth/auth';
 import { EmailValidator } from '../../validators/email';
-import { Dashboard } from '../dashboard/dashboard';
+import { HomePage } from '../home/home';
 
 
 @IonicPage()
@@ -32,7 +32,7 @@ export class SignupPage {
       this.authProvider.signupUser(this.signupForm.value.email, this.signupForm.value.password)
         .then(() => {
           this.loading.dismiss().then(() => {
-            this.navCtrl.setRoot(Dashboard);
+            this.navCtrl.setRoot(HomePage);
           });
         }, (error) => {
           this.loading.dismiss().then(() => {
@@ -45,7 +45,7 @@ export class SignupPage {
           });
         });
 
-      this.loading = this.loadingCtrl.create();
+      this.loading = this.loadingCtrl.create({ content: "Registering , please wait...", spinner: "ios" });
       this.loading.present();
     }
   }

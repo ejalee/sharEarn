@@ -1,18 +1,25 @@
-import { Component, NgZone } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Component, NgZone, ViewChild } from '@angular/core';
+import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+// import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
+import { AboutPage } from '../pages/about/about';
+import { ContactPage } from '../pages/contact/contact';
+import { ProfilePage } from '../pages/profile/profile';
+import { SharePage } from '../pages/share/share';
 
 import firebase from 'firebase';
 
-import { TabsPage } from '../pages/tabs/tabs';
+// import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   rootPage: any; //= TabsPage;
+  // rootPage: any = LoginPage;
+  @ViewChild(Nav) nav: Nav;
   public zone: NgZone;
 
   constructor(platform: Platform, private statusBar: StatusBar, private splashScreen: SplashScreen) {
@@ -41,7 +48,29 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
-      splashScreen.hide();
+      splashScreen.hide()
+      // this.hideSplash();
     });
   }
+
+  menu_home(Page) {
+    this.nav.setRoot(HomePage);
+  }
+
+  menu_about() {
+    this.nav.setRoot(AboutPage);
+  }
+
+  menu_contact() {
+    this.nav.setRoot(ContactPage);
+  }
+
+  menu_profile() {
+    this.nav.setRoot(ProfilePage);
+  }
+
+  menu_shares() {
+    this.nav.setRoot(SharePage);
+  }
+
 }

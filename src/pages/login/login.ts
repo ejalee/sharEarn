@@ -56,7 +56,7 @@ export class LoginPage {
           });
         });
 
-      this.loading = this.loadingCtrl.create();
+      this.loading = this.loadingCtrl.create({ content: "Logging in , please wait...", spinner: "ios" });
       this.loading.present();
     }
   }

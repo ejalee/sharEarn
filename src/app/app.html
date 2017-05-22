@@ -1,1 +1,28 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu side="left" [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item (click)="menu_home()" menuClose>
+        <ion-icon name="home"></ion-icon>&nbsp;&nbsp;Home
+      </ion-item>
+      <ion-item (click)="menu_shares()" menuClose>
+        <ion-icon name="filing"></ion-icon>&nbsp;&nbsp;My Shares
+      </ion-item>
+      <ion-item (click)="menu_profile()" menuClose>
+        <ion-icon name="contact"></ion-icon>&nbsp;&nbsp;My Profile
+      </ion-item>
+      <ion-item (click)="menu_about()" menuClose>
+        <ion-icon name="finger-print"></ion-icon>&nbsp;&nbsp; About Us
+      </ion-item>
+      <ion-item (click)="menu_contact()" menuClose>
+        <ion-icon name="mail"></ion-icon>&nbsp;&nbsp;Contact Us
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

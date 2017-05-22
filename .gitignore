@@ -34,3 +34,7 @@ Thumbs.db
 UserInterfaceState.xcuserstate
 .editorconfig
 .io-config.json
+.editorconfig
+share-key.keystore
+sharEarn.apk
+android-release-unsigned.apk

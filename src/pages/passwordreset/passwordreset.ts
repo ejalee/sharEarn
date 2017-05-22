@@ -54,7 +54,7 @@ export class PasswordResetPage {
           });
         });
 
-      this.loading = this.loadingCtrl.create();
+      this.loading = this.loadingCtrl.create({ content: "Sending Reset Link to email , please wait...", spinner: "ios" });
       this.loading.present();
     }
   }
